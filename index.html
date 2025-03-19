@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Homework #2: D3 Lolli - CSE 578 - Spring 2025</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center">Homework #2: D3 Lolli</h1>
+            <h3 class="text-center">Amie Nguyen - ahnguy30@asu.edu</h3>
+            <h3 class="text-center">Female vs Male employment rate in various countries</h3>
+            <div class="row">
+                <div class="col-1">Country: </div>
+                <div class="col-3">
+                    <select name="country" id="country-select" class="select-field" onchange="drawLolliPopChart(this.value)">
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="United States">United States</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value='Canada'>Canada</option>
+                    </select>
+                </div>
+            </div>
+            <div id="myDataVis"></div>
+            <h4 class="title-data">Data Abstraction</h4>
+            <p id="dataAbstractionSection">
+              <ul>
+                  <li>The <b>males_data.csv</b> dataset is a tabula type, static availability, with 180 attributes and 33 data points </li>
+                  <li>The <b>Year</b> attribute is ordinal ordered and its cardinality is 32</li>
+                  <li>The <b>Vietnam</b> attribute is quantitative ordered, and its range is (0.69 - 0.544 = 0.146) </li>
+              </ul>  
+            </p>
+        </div><!-- End of the container div -->
+    </body>
+</html> 
+
+<script type="module">
+import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+</script>
+
